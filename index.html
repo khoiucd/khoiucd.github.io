@@ -101,6 +101,11 @@
             line-height: 1.5;
             padding: 2em 1em;
             scroll-behavior: smooth;
+
+            min-height:100vh; 
+            display:flex; 
+            flex-direction:column; 
+            justify-content:space-between;
         }
 
         h1,
@@ -213,6 +218,7 @@
 </head>
 
 <body>
+    <div>
     <!-- Make details work on IE -->
     <script src="//cdn.jsdelivr.net/npm/details-polyfill@1/index.min.js" async></script>
     <!-- Headshot -->
@@ -273,8 +279,8 @@
 
     <!-- Publications section -->
     <section>
-        <h2><a href="#publications" style="text-decoration: none;" id="publications">Recent publications</a></h2>  <i>(<a href="https://khoiucd.github.io/publications/">full list</a>)</i>
-
+        <h2><a href="#publications" style="text-decoration: none;" id="publications">Publications</a></h2>
+        <p style="margin-top:0px; margin-bottom:0px">(*) denotes equal contribution</p>
 
         <p><a href="https://arxiv.org/abs/2207.10785">Inductive and Transductive Few-Shot Video Classification via Appearance and Temporal Alignments</a><br />
         <b>Khoi D. Nguyen</b>, Quoc-Huy Tran, Khoi Nguyen, Binh-Son Hua, and Rang Nguyen<br />
@@ -289,12 +295,13 @@
         </p>
 
     </section>
+    </div>
     
     <br>
-
+    
     <footer>
         <span>
-        template modified from craffel.github.io.
+        template taken from craffel.github.io.
         </span>
     </footer>
 
