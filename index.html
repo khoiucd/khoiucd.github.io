@@ -99,13 +99,16 @@
             /* System fonts as fallbacks */
             font-family: "Roboto", -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
             line-height: 1.5;
-            padding: 2em 1em;
+            /* padding: 2em 1em; */
             scroll-behavior: smooth;
+        }
 
-            min-height:100vh; 
-            display:flex; 
-            flex-direction:column; 
+        .pseudobody {
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
             justify-content:space-between;
+            padding: 2em 1em 0.2em;
         }
 
         h1,
@@ -152,6 +155,11 @@
             align-items: center;
             justify-content: space-between;
             flex-flow: row;
+        }
+
+        footer {
+            font-size: 0.875em;
+            margin-top: 3em;
         }
 
         @media (max-width: 650px) {
@@ -218,6 +226,7 @@
 </head>
 
 <body>
+    <div class="pseudobody">
     <div>
     <!-- Make details work on IE -->
     <script src="//cdn.jsdelivr.net/npm/details-polyfill@1/index.min.js" async></script>
@@ -297,8 +306,6 @@
     </section>
     </div>
     
-    <br>
-    
     <footer>
         <span>
         template taken from craffel.github.io.
@@ -312,6 +319,6 @@
         gtag('js', new Date());
         gtag('config', 'G-6ZJWKDGX9R');
     </script>
-
+    </div>
 </body>
 </html>
