@@ -48,56 +48,16 @@
             box-sizing: inherit;
         }
 
-        /* roboto-regular - latin */
-        @font-face {
-          font-family: 'Roboto';
-          font-style: normal;
-          font-weight: 400;
-          src: url('../fonts/roboto-v18-latin-regular.eot'); /* IE9 Compat Modes */
-          src: local('Roboto'), local('Roboto-Regular'),
-               url('../fonts/roboto-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-               url('../fonts/roboto-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-               url('../fonts/roboto-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
-               url('../fonts/roboto-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-               url('../fonts/roboto-v18-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
-        }
-        /* roboto-italic - latin */
-        @font-face {
-          font-family: 'Roboto';
-          font-style: italic;
-          font-weight: 400;
-          src: url('../fonts/roboto-v18-latin-italic.eot'); /* IE9 Compat Modes */
-          src: local('Roboto Italic'), local('Roboto-Italic'),
-               url('../fonts/roboto-v18-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-               url('../fonts/roboto-v18-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
-               url('../fonts/roboto-v18-latin-italic.woff') format('woff'), /* Modern Browsers */
-               url('../fonts/roboto-v18-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
-               url('../fonts/roboto-v18-latin-italic.svg#Roboto') format('svg'); /* Legacy iOS */
-        }
-        /* roboto-700 - latin */
-        @font-face {
-          font-family: 'Roboto';
-          font-style: normal;
-          font-weight: 700;
-          src: url('../fonts/roboto-v18-latin-700.eot'); /* IE9 Compat Modes */
-          src: local('Roboto Bold'), local('Roboto-Bold'),
-               url('../fonts/roboto-v18-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-               url('../fonts/roboto-v18-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-               url('../fonts/roboto-v18-latin-700.woff') format('woff'), /* Modern Browsers */
-               url('../fonts/roboto-v18-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-               url('../fonts/roboto-v18-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
-        }
-
         body {
 
             /* Nice light gray background to offset the text a little */
-            background-color: #fefefe;
+            background-color: #ffffff;
             color: #333;
             margin: 0 auto;
             max-width: 50em;
 
             /* System fonts as fallbacks */
-            font-family: "Roboto", -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+            font-family: "Palatino", -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
             line-height: 1.5;
             /* padding: 2em 1em; */
             scroll-behavior: smooth;
@@ -115,7 +75,7 @@
         h2,
         strong {
             color: #333;
-            font-family: "Roboto", -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+            font-family: "Palatino", -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
         }
 
         h2 a {
@@ -240,7 +200,7 @@
         <h1 style="margin-top: 0px; margin-bottom: 4px">Khoi Duc Nguyen</h1>
 
         <div class="social-links">
-            <a href="mailto:khoinguyenucd@gmail.com"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 36 24">
+            <a href="mailto:kdnguyen7@wisc.edu"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 36 24">
                     <g>
                         <path class="cls-1" d="M18,13.47,34.52.25A2.55,2.55,0,0,0,33.43,0H2.57a2.55,2.55,0,0,0-1.1.25Z"></path>
                         <path class="cls-1" d="M35.74,1.46l-.06.07L18.54,15.24a.86.86,0,0,1-1.07,0L.32,1.53.26,1.46A2.54,2.54,0,0,0,0,2.57V21.43A2.57,2.57,0,0,0,2.57,24H33.43A2.57,2.57,0,0,0,36,21.43V2.57A2.55,2.55,0,0,0,35.74,1.46Z"></path>
@@ -288,6 +248,12 @@
         <p style="margin-top:0px; margin-bottom:0px">(*) denotes equal contribution</p>
 
 
+        <p><a href="index.html">ESCAPE: Encoding Super-keypoints for Category-Agnostic Pose Estimation</a><br />
+        <b>Khoi Duc Nguyen</b>, Chen Li, Gim Hee Lee<br />
+        <i>Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2024 (to appear).<br />
+
+        </p>
+
         <p><a href="https://arxiv.org/abs/2207.10785">Inductive and Transductive Few-Shot Video Classification via Appearance and Temporal Alignments</a><br />
         <b>Khoi Duc Nguyen</b>, Quoc-Huy Tran, Khoi Nguyen, Binh-Son Hua, and Rang Nguyen<br />
         <i>European Conference on Computer Vision (ECCV)</i>, 2022.<br />
@@ -295,7 +261,7 @@
         </p>
 
         <p><a href="https://arxiv.org/abs/2206.04679">POODLE: Improving Few-shot Learning via Penalizing Out-of-Distribution Samples</a><br />
-        Duong H. Le*, <b>Khoi D. Nguyen</b>*, Khoi Nguyen, Quoc-Huy Tran, Rang Nguyen, and Binh-Son Hua<br />
+        Duong H. Le*, <b>Khoi Duc Nguyen</b>*, Khoi Nguyen, Quoc-Huy Tran, Rang Nguyen, and Binh-Son Hua<br />
         <i>Neural Information Processing Systems 35 (NeurIPS)</i>, 2021.<br />
 
         </p>
