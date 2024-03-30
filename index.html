@@ -51,13 +51,13 @@
         body {
 
             /* Nice light gray background to offset the text a little */
-            background-color: #ffffff;
+            background-color: #FFF;
             color: #333;
             margin: 0 auto;
             max-width: 50em;
 
             /* System fonts as fallbacks */
-            font-family: "Palatino", -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
             line-height: 1.5;
             /* padding: 2em 1em; */
             scroll-behavior: smooth;
@@ -75,7 +75,7 @@
         h2,
         strong {
             color: #333;
-            font-family: "Palatino", -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         }
 
         h2 a {
@@ -92,6 +92,7 @@
 
         a {
             color: #c5050c;
+            text-decoration: none;
         }
 
         .headshot {
@@ -182,6 +183,11 @@
             font-weight: bold;
         }
 
+        .work-column {
+                padding-top:5px;
+                padding-right:20px;
+            }
+
     </style>
 </head>
 
@@ -191,9 +197,9 @@
     <!-- Make details work on IE -->
     <script src="//cdn.jsdelivr.net/npm/details-polyfill@1/index.min.js" async></script>
     <!-- Headshot -->
-    <div class="headshot">
-        <a href="images/me_small.jpg"><img src="images/me_small.jpg" alt="Khoi Duc Nguyen Headshot" title="Khoi Duc Nguyen Headshot" /></a>
-    </div>
+    <!-- <div class="headshot">
+        <a href="images/IMG_1328.jpeg"><img src="images/IMG_1328.jpeg" alt="Khoi Duc Nguyen Headshot" title="Khoi Duc Nguyen Headshot" /></a>
+    </div> -->
 
     <!-- Header with social links -->
     <header>
@@ -242,6 +248,92 @@
 
     </main>
 
+    <section>
+        <h2><a href="#education" style="text-decoration: none;" id="education">Education</a></h2>
+
+        <table>
+            <tr>
+                <td class="work-column">
+                    <img src="images/uw-logo-horizontal-full-color-print-1.png" height="30px"/>
+                </td>
+                <td class="work-column">
+                    Aug 2023 - Present
+                </td>
+                <td>
+                    <i>Ph.D in Computer Science</i>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="work-column">
+                    <img src="images/backkhoa_logo-1.png" height="30px"/>
+                </td>
+                <td class="work-column">
+                    Aug 2017 - Dec 2021
+                </td>
+                <td>
+                    <i>B.Eng in Computer Engineering</i>
+                </td>
+            </tr>
+        </table>
+
+    </section>
+
+    <section>
+        <h2><a href="#experience" style="text-decoration: none;" id="experience">Work Experience</a></h2>
+
+        <table>
+            <tr>
+                <td class="work-column">
+                    <img src="images/nus_logo_full-horizontal.jpeg" height="30px"/>
+                </td>
+                <td  class="work-column">
+                    Jun 2022 - May 2023
+                </td>
+                <td>
+                    <i>Research Intern</i>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="work-column">
+                    <img src="images/vinai_logo.png" height="30px"/>
+                </td>
+                <td  class="work-column">
+                    Nov 2020 - Jun 2022
+                </td>
+                <td>
+                    <i>Research Resident</i>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="work-column">
+                    <img src="images/fpt_logo.png" height="25px"/>
+                </td>
+                <td  class="work-column">
+                    Jun 2020 - Sep 2020
+                </td>
+                <td>
+                    <i>Engineering Intern</i>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="work-column">
+                    <img src="images/backkhoa_logo-1.png" height="30px"/>
+                </td>
+                <td  class="work-column">
+                    Jan 2020 - Oct 2020
+                </td>
+                <td>
+                    <i>Research Assistant</i>
+                </td>
+            </tr>
+        </table>
+
+    </section>
+
     <!-- Publications section -->
     <section>
         <h2><a href="#publications" style="text-decoration: none;" id="publications">Publications</a></h2>
@@ -250,7 +342,7 @@
 
         <p><a href="index.html">ESCAPE: Encoding Super-keypoints for Category-Agnostic Pose Estimation</a><br />
         <b>Khoi Duc Nguyen</b>, Chen Li, Gim Hee Lee<br />
-        <i>Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2024 (to appear).<br />
+        <i>Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2024.<br />
 
         </p>
 
@@ -264,6 +356,17 @@
         Duong H. Le*, <b>Khoi Duc Nguyen</b>*, Khoi Nguyen, Quoc-Huy Tran, Rang Nguyen, and Binh-Son Hua<br />
         <i>Neural Information Processing Systems 35 (NeurIPS)</i>, 2021.<br />
 
+        </p>
+
+    </section>
+
+    <section>
+        <h2><a href="#teaching" style="text-decoration: none;" id="teaching">Teaching</a></h2>
+
+        <p><i>CS354 Machine Organization and Programming</i><br /> Spring 2024
+        </p>
+        
+        <p><i>CS240 Intro to Discrete Mathematics</i><br /> Fall 2023
         </p>
 
     </section>
