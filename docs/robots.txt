@@ -1,1 +1,0 @@
-User-agent: * Disallow: Sitemap: https://khoiucd.github.io//sitemap.xml
