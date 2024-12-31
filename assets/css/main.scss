@@ -7,9 +7,8 @@
 $max-content-width: {{ site.max_width }};
 
 @import
+  "font",
   "variables",
-  "themes",
   "layout",
-  "base",
-  "distill"
+  "base"
 ;

@@ -2,25 +2,25 @@
  * Content
  ******************************************************************************/
 
-body {
-  padding-bottom: 70px;
-  color: var(--global-text-color);
-  background-color: var(--global-bg-color);
+ body {
+   font-family: 'Nunito', 'Monospace', 'Lato';
+   padding-bottom: 70px;
+   color: $text-color;
+ }
 
-  h1, h2, h3, h4, h5, h6 {
-    scroll-margin-top: 66px;
-  }
-}
+ body {
+   font-weight: 400;
+ }
 
-body.fixed-top-nav {
-  // Add some padding for the nav-bar.
-  padding-top: 56px;
-}
+ body.fixed-top-nav {
+   // Add some padding for the nav-bar.
+   padding-top: 56px;
+ }
 
-body.sticky-bottom-footer {
-  // Remove padding below footer.
-  padding-bottom: 0;
-}
+ body.sticky-bottom-footer {
+   // Remove padding below footer.
+   padding-bottom: 0;
+ }
 
 .container {
   max-width: $max-content-width;
