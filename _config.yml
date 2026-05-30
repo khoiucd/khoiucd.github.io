@@ -1,0 +1,38 @@
+title: Khoi Duc Nguyen
+name: Khoi Duc Nguyen
+position: Ph.D Student, Computer Science
+institution: University of Wisconsin - Madison
+email_text: kdnguyen7 [at] wisc [dot] edu
+cv_pdf: /assets/pdf/cv.pdf
+
+url: https://khoiucd.github.io
+baseurl: ""
+
+description: |-
+  I am a PhD student at the
+  [University of Wisconsin-Madison](https://www.wisc.edu/), advised by
+  [Prof. Yin Li](https://www.biostat.wisc.edu/~yli/). My research focuses 
+  on machine learning and computer vision, with an emphasis on developing 
+  highly efficient models that make effective use of data and computational 
+  resources.
+
+  This summer, I will join Meta in Menlo Park as a Research Scientist Intern, 
+  working on MLLMs post-training.
+
+social:
+  google_scholar: SjtIWqYAAAAJ
+  github: khoiucd
+  linkedin: khoiucd
+  x: khoiucd
+
+# google_analytics: G-6ZJWKDGX9R
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - AGENT.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

@@ -1,0 +1,31 @@
+- organization: Meta
+  location: Menlo Park, US
+  role: Research Scientist Intern
+  dates: Summer 2026
+  details:
+    - Worked with Dr. Wei Shi
+    - MLLM post-training.
+
+- organization: Dolby Laboratories
+  location: Sunnyvale, US
+  role: PhD Research Intern
+  dates: May 2025 - Aug 2025
+  details:
+    - Worked with Trisha Mittal
+    - Vector graphics generation.
+
+- organization: National University of Singapore
+  location: Singapore
+  role: AI Research Intern
+  dates: Jun 2022 - May 2023
+  details:
+    - Worked with Dr. Chen Li and Prof. Gim Hee Lee
+    - 2D pose estimation.
+
+- organization: Qualcomm AI Research (formerly VinAI Research)
+  location: Ho Chi Minh, Vietnam
+  role: AI Research Resident
+  dates: Nov 2020 - Jun 2022
+  details:
+    - Worked with Dr. Rang Nguyen, Dr. Quoc-Huy Tran and Prof. Binh-Son Hua
+    - Image, video few-shot learning.

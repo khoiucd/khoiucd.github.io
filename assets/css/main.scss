@@ -1,0 +1,324 @@
+---
+---
+
+$theme-color: #B17457;
+$text-color: #4A4947;
+$header-color: #FAF7F0;
+$muted-color: #FAF7F0;
+$page-background: #FAF7F0;
+
+body {
+  color: $text-color;
+  font-family: "Nunito", "Monospace", "Lato", sans-serif;
+  font-weight: 400;
+  padding-bottom: 70px;
+  background-color: $page-background;
+}
+
+body.fixed-top-nav {
+  padding-top: 56px;
+}
+
+::selection {
+  background-color: #E8DFD1;
+  color: $text-color;
+}
+
+.container {
+  max-width: 850px;
+}
+
+a,
+table.table a {
+  color: $theme-color;
+}
+
+a:hover,
+table.table a:hover {
+  color: $theme-color;
+  text-decoration: underline;
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5 {
+  font-weight: 600;
+}
+
+.intro {
+  font-family: "Iowan Old Style", Iowan, "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+.profile-intro {
+  align-items: start;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: clamp(160px, 28vw, 240px) minmax(0, 1fr);
+}
+
+.profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.profile-photo {
+  aspect-ratio: 1;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.profile-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-contact {
+  align-items: flex-start;
+  display: flex;
+  font-size: 0.95rem;
+  flex-direction: column;
+  gap: 0.25rem;
+  line-height: 1.45;
+  margin-top: 0.5rem;
+}
+
+.profile-contact .contact-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+
+  a {
+    color: $text-color;
+    margin-right: 0.35em;
+  }
+
+  a:hover {
+    color: $theme-color;
+    text-decoration: none;
+  }
+}
+
+.section-heading {
+  font-family: "Iowan Old Style", Iowan, "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+.error-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 70vh;
+  max-width: 810px;
+  padding: 4rem 1rem 0;
+  text-align: center;
+}
+
+.error-code {
+  color: $theme-color;
+  font-family: "Iowan Old Style", Iowan, "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.cv-header {
+  padding-top: 1rem;
+  text-align: center;
+
+  h1 {
+    font-family: "Iowan Old Style", Iowan, "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+  }
+}
+
+.cv-header-contact {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  gap: 0.35rem 0.8rem;
+  justify-content: center;
+}
+
+.cv-header-subtitle {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.cv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.cv-list-item {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: minmax(0, 1fr) max-content;
+}
+
+.cv-list-block {
+  display: block;
+}
+
+.cv-item-title,
+.cv-item-detail {
+  display: block;
+}
+
+.cv-item-title {
+  color: $theme-color;
+  font-family: "Iowan Old Style", Iowan, "Palatino Linotype", Palatino, Georgia, serif;
+  font-weight: 600;
+}
+
+.cv-item-meta {
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.cv-item-date {
+  font-style: italic;
+}
+
+.cv-item-details {
+  margin: 0.25rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.cv-skills p {
+  margin-bottom: 0.3rem;
+}
+
+.navbar {
+  background-color: $header-color;
+  border-bottom: 1px solid $text-color;
+  box-shadow: none;
+  opacity: 0.95;
+}
+
+.navbar.navbar-light {
+  .navbar-brand,
+  .contact-icon a,
+  .navbar-cv {
+    color: $text-color;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+  }
+
+  .navbar-identity {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    min-width: max-content;
+  }
+
+  .navbar-cv {
+    font-size: 0.96rem;
+    font-weight: 600;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .navbar-cv:hover {
+    text-decoration: underline;
+  }
+
+  .contact-icon {
+    font-size: 1.5rem;
+    margin-top: 0.1em;
+
+    a {
+      margin-left: 0.3em;
+    }
+
+    a:hover {
+      color: $theme-color;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .profile-intro {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .profile-sidebar {
+    max-width: 220px;
+  }
+
+  .cv-list-item {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-item-meta {
+    text-align: left;
+  }
+}
+
+.publications-front {
+  ol.bibliography {
+    list-style: none;
+    margin-top: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 1rem;
+
+      span {
+        display: block;
+      }
+
+      .title {
+        font-family: "Iowan Old Style", Iowan, "Palatino Linotype", Palatino, Georgia, serif;
+        font-size: 1rem;
+        font-weight: normal;
+      }
+
+      .author,
+      .periodical {
+        font-size: 0.95rem;
+      }
+
+      .author > em {
+        // border-bottom: 1px solid;
+        // font-style: normal;
+        font-weight: 700;
+      }
+
+      .venue-abbr,
+      .links {
+        font-weight: 600;
+      }
+
+      .links {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.site-footer {
+  color: rgba($text-color, 0.72);
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem 0;
+  text-align: left;
+}

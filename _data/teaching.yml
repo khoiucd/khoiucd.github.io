@@ -1,0 +1,14 @@
+- institution: University of Wisconsin-Madison
+  courses:
+    - code: CS240
+      name: Introduction to Discrete Mathematics
+      semester: Fall 2023
+    - code: CS354
+      name: Machine Organization and Programming
+      semester: Spring 2024
+    - code: CS240
+      name: Introduction to Discrete Mathematics
+      semester: Fall 2024
+    - code: CS354
+      name: Machine Organization and Programming
+      semester: Spring 2025

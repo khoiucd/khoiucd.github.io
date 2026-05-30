@@ -1,0 +1,185 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Curriculum Vitae | {{ site.title }}</title>
+    <meta name="description" content="Curriculum Vitae for {{ site.name }}">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.17.0/css/mdb.min.css" integrity="sha256-/SwJ2GDcEt5382i8zqDwl36VJGECxEoIcBIuoLmLR4g=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/uw-favicons/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/uw-favicons/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/uw-favicons/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/uw-favicons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/uw-favicons/images/favicons/safari-pinned-tab.svg" color="#c5050c">
+    <link rel="shortcut icon" href="/assets/uw-favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#c5050c">
+    <meta name="msapplication-config" content="/assets/uw-favicons/browserconfig.xml">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="{{ site.url }}/cv.html">
+  </head>
+
+  <body class="fixed-top-nav">
+    <header>
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <div class="navbar-identity">
+            <a class="navbar-brand title font-weight-bold" href="/">
+              <span class="font-weight-bold">{{ site.name }}</span>
+            </a>
+          </div>
+          <a class="navbar-cv" href="/cv.html">Curriculum Vitae</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mt-3 cv-page">
+      <article>
+        <header class="cv-header">
+          <h1>{{ site.name }}</h1>
+          <p class="cv-header-subtitle">{{ site.position }}, {{ site.institution }}</p>
+          <div class="cv-header-contact">
+            <span>{{ site.email_text }}</span>
+            <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user={{ site.social.google_scholar }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          </div>
+        </header>
+
+        <hr>
+        <h5 id="education" class="section-heading">Education</h5>
+        <div class="cv-list">
+          {% for education in site.data.education %}
+            <div class="cv-list-item">
+              <div>
+                <span class="cv-item-title">{{ education.institution }}</span>
+                <span class="cv-item-detail">{{ education.degree }}</span>
+              </div>
+              <div class="cv-item-meta">
+                <span>{{ education.location }}</span>
+                <span class="cv-item-date">{{ education.dates }}</span>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <hr>
+        <h5 id="experience" class="section-heading">Experience</h5>
+        <div class="cv-list">
+          {% for experience in site.data.experience %}
+            <div class="cv-list-item">
+              <div>
+                <span class="cv-item-title">{{ experience.organization }}</span>
+                <span class="cv-item-detail">{{ experience.role }}</span>
+                {% if experience.details %}
+                  <ul class="cv-item-details">
+                    {% for detail in experience.details %}
+                      <li>{{ detail }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+              <div class="cv-item-meta">
+                <span>{{ experience.location }}</span>
+                <span class="cv-item-date">{{ experience.dates }}</span>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <hr>
+        <h5 id="publications" class="section-heading">Publications</h5>
+        <p>(*) denotes equal contribution</p>
+        <div class="publications-front">
+          <ol class="bibliography">
+            {% for paper in site.data.publications %}
+              <li>
+                <div class="row">
+                  <div id="{{ paper.id }}" class="col-sm-11">
+                    <span class="title">
+                      <a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+                    </span>
+                    <span class="author">
+                      {% for author in paper.authors %}
+                        {% assign author_name = author.name | default: author %}
+                        {% if forloop.last and forloop.length > 1 %}and {% endif %}{% if author.me %}<em>{{ author_name }}</em>{% else %}{{ author_name }}{% endif %}{% unless forloop.last %}, {% endunless %}
+                      {% endfor %}
+                    </span>
+                    <span class="periodical">
+                      <nobr class="venue-abbr">{{ paper.venue_abbr }},</nobr>
+                      <em>{{ paper.venue }}</em>
+                      {% if paper.code %}
+                        <nobr class="links">
+                          [<a href="{{ paper.code }}" target="_blank" rel="noopener noreferrer">code</a>]
+                        </nobr>
+                      {% endif %}
+                    </span>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ol>
+        </div>
+
+        <hr>
+        <h5 id="services" class="section-heading">Services</h5>
+        <div class="services-list">
+          {% for service in site.data.services %}
+            <p><strong>{{ service.role }}</strong>: {{ service.venues }}</p>
+          {% endfor %}
+        </div>
+
+        <hr>
+        <h5 id="teaching" class="section-heading">Teaching</h5>
+        <div class="cv-list">
+          {% for teaching in site.data.teaching %}
+            <div class="cv-list-block">
+              <span class="cv-item-title">{{ teaching.institution }}</span>
+              <ul class="cv-item-details">
+                {% for course in teaching.courses %}
+                  <li>{{ course.code }} {{ course.name }}, <span class="cv-item-date">{{ course.semester }}</span></li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
+
+        <hr>
+        <h5 id="skills" class="section-heading">Skills</h5>
+        <div class="cv-skills">
+          {% for skill in site.data.skills %}
+            <p><strong>{{ skill.category }}</strong>: {{ skill.items | join: ", " }}</p>
+          {% endfor %}
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        &copy; {{ site.time | date: "%Y" }} {{ site.name }}
+      </div>
+    </footer>
+
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+  </body>
+</html>

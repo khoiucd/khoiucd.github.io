@@ -1,0 +1,22 @@
+- category: Programming
+  items:
+    - Python
+    - C/C++
+    - MATLAB
+
+- category: Frameworks & Tools
+  items:
+    - PyTorch
+    - JAX
+    - OpenCV
+    - NumPy
+    - Git
+    - LaTeX
+    - Markdown
+    - Slurm
+
+- category: Operating Systems
+  items:
+    - Linux
+    - macOS
+    - Windows

@@ -1,0 +1,84 @@
+- id: xu2025learning
+  title: Learning to Inference Adaptively for Multimodal Large Language Models
+  url: https://arxiv.org/abs/2503.10905
+  authors:
+    - Zhuoyan Xu*
+    - name: Khoi Duc Nguyen*
+      me: true
+    - Preeti Mukherjee
+    - Saurabh Bagchi
+    - Somali Chaterji
+    - Yingyu Liang
+    - Yin Li
+  venue_abbr: ICCV 2025
+  venue: International Conference on Computer Vision.
+  code: https://github.com/zhuoyan-xu/AdaLLaVA.git
+
+- id: liu2025pave
+  title: "PAVE: Patching and Adapting Video Large Language Models"
+  url: https://arxiv.org/abs/2503.19794
+  authors:
+    - Zhuoming Liu
+    - Yiquan Li
+    - name: Khoi Duc Nguyen
+      me: true
+    - Yiwu Zhong
+    - Yin Li
+  venue_abbr: CVPR 2025
+  venue: Conference on Computer Vision and Pattern Recognition.
+  code: https://github.com/dragonlzm/PAVE.git
+
+- id: xu2024adainf
+  title: "Adainf: Adaptive inference for resource-constrained foundation models"
+  url: https://openreview.net/forum?id=A942VRmfhQ
+  authors:
+    - Zhuoyan Xu
+    - name: Khoi Duc Nguyen
+      me: true
+    - Preeti Mukherjee
+    - Somali Chaterji
+    - Yingyu Liang
+    - Yin Li
+  venue_abbr: ICML 2024 Workshop
+  venue: Workshop on Efficient Systems for Foundation Models II @ ICML2024.
+
+- id: nguyen2024escape
+  title: "ESCAPE: Encoding Super-keypoints for Category-Agnostic Pose Estimation"
+  url: https://openaccess.thecvf.com/content/CVPR2024/papers/Nguyen_ESCAPE_Encoding_Super-keypoints_for_Category-Agnostic_Pose_Estimation_CVPR_2024_paper.pdf
+  authors:
+    - name: Khoi Duc Nguyen
+      me: true
+    - Chen Li
+    - Gim Hee Lee
+  venue_abbr: CVPR 2024
+  venue: Conference on Computer Vision and Pattern Recognition.
+  code: https://github.com/khoiucd/escape-tgt
+
+- id: att
+  title: Inductive and Transductive Few-Shot Video Classification via Appearance and Temporal Alignments
+  url: https://arxiv.org/abs/2207.10785
+  authors:
+    - name: Khoi Duc Nguyen
+      me: true
+    - Quoc-Huy Tran
+    - Khoi Nguyen
+    - Binh-Son Hua
+    - Rang Nguyen
+  venue_abbr: ECCV 2022
+  venue: European Conference on Computer Vision.
+  code: https://github.com/VinAIResearch/fsvc-ata
+
+- id: poodle
+  title: "POODLE: Improving Few-shot Learning via Penalizing Out-of-Distribution Samples"
+  url: https://arxiv.org/abs/2206.04679
+  authors:
+    - Duong H. Le*
+    - name: Khoi Duc Nguyen*
+      me: true
+    - Khoi Nguyen
+    - Quoc-Huy Tran
+    - Rang Nguyen
+    - Binh-Son Hua
+  venue_abbr: NeurIPS 2021
+  venue: Neural Information Processing Systems.
+  code: https://github.com/lehduong/poodle
