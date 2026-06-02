@@ -3,7 +3,11 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+.DS_Store
 .DS_store
 .ruby-version
 Gemfile.lock
 vendor
+share/
+notes/*
+!notes/_template.md

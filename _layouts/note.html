@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="{{ page.robots | default: 'noindex, nofollow' }}">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: page.title }}">
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [["\\(", "\\)"], ["$", "$"]],
+          displayMath: [["\\[", "\\]"], ["$$", "$$"]]
+        }
+      };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.17.0/css/mdb.min.css" integrity="sha256-/SwJ2GDcEt5382i8zqDwl36VJGECxEoIcBIuoLmLR4g=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/uw-favicons/images/favicons/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/uw-favicons/images/favicons/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/uw-favicons/images/favicons/favicon-16x16.png' | relative_url }}">
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+    <link rel="manifest" href="{{ '/assets/uw-favicons/site.webmanifest' | relative_url }}">
+    <link rel="mask-icon" href="{{ '/assets/uw-favicons/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#c5050c">
+    <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
+    <meta name="msapplication-TileColor" content="#c5050c">
+    <meta name="msapplication-config" content="{{ '/assets/uw-favicons/browserconfig.xml' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+    <style>
+      .note-page {
+        font-family: "Iowan Old Style", Iowan, "Palatino Linotype", Palatino, Georgia, serif;
+        padding-top: 1rem;
+      }
+
+      .note-page h1,
+      .note-page h2,
+      .note-page h3 {
+        font-family: inherit;
+      }
+
+      .note-page h1 {
+        font-size: 2rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .note-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .note-meta {
+        font-size: 0.95rem;
+        font-style: italic;
+        margin-bottom: 1.5rem;
+      }
+
+      .note-abstract {
+        border-left: 3px solid #B17457;
+        margin: 1.5rem 0;
+        padding-left: 1rem;
+      }
+
+      .note-content h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: 1.6rem;
+      }
+
+      .note-content h3 {
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin-top: 1.2rem;
+      }
+
+      .note-content strong {
+        font-weight: 700;
+      }
+
+      .note-content table {
+        border-collapse: collapse;
+        display: block;
+        margin-bottom: 1rem;
+        overflow-x: auto;
+        width: 100%;
+      }
+
+      .note-content th,
+      .note-content td {
+        border: 1px solid rgba(74, 73, 71, 0.45);
+        padding: 0.35rem 0.55rem;
+      }
+
+      .note-content th {
+        font-weight: 600;
+      }
+
+      .note-content .references {
+        font-size: 0.95rem;
+      }
+
+      .note-content .references li {
+        margin-bottom: 0.7rem;
+      }
+
+      .note-content sup a {
+        font-size: 0.75rem;
+      }
+    </style>
+  </head>
+
+  <body class="fixed-top-nav">
+    <header>
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <div class="navbar-identity">
+            <a class="navbar-brand title font-weight-bold" href="{{ '/' | relative_url }}">
+              <span class="font-weight-bold">{{ site.name }}</span>
+            </a>
+          </div>
+          <a class="navbar-cv" href="{{ '/cv.html' | relative_url }}">Curriculum Vitae</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mt-3 note-page">
+      <article>
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}
+          <p class="note-subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+        <p class="note-meta">
+          {% if page.book %}{{ page.book }}{% endif %}
+          {% if page.author %}{% if page.book %} · {% endif %}{{ page.author }}{% endif %}
+          {% if page.chapter %}{% if page.book or page.author %} · {% endif %}{{ page.chapter }}{% endif %}
+          {% if page.date %}{% if page.book or page.author or page.chapter %} · {% endif %}{{ page.date | date: "%B %-d, %Y" }}{% endif %}
+        </p>
+
+        {% if page.abstract %}
+          <div class="note-abstract">
+            {{ page.abstract | markdownify }}
+          </div>
+        {% endif %}
+
+        <hr>
+
+        <div class="note-content">
+          {{ content }}
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        &copy; {{ site.time | date: "%Y" }} {{ site.name }}
+      </div>
+    </footer>
+  </body>
+</html>

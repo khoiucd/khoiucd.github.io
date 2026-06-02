@@ -1,0 +1,293 @@
+---
+layout: null
+permalink: /notes/reader-9xk2m/
+sitemap: false
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Note Reader | {{ site.title }}</title>
+    <meta name="description" content="Local Markdown note reader">
+
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [["\\(", "\\)"], ["$", "$"]],
+          displayMath: [["\\[", "\\]"], ["$$", "$$"]]
+        }
+      };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.17.0/css/mdb.min.css" integrity="sha256-/SwJ2GDcEt5382i8zqDwl36VJGECxEoIcBIuoLmLR4g=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/uw-favicons/images/favicons/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/uw-favicons/images/favicons/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/uw-favicons/images/favicons/favicon-16x16.png' | relative_url }}">
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+    <link rel="manifest" href="{{ '/assets/uw-favicons/site.webmanifest' | relative_url }}">
+    <link rel="mask-icon" href="{{ '/assets/uw-favicons/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#c5050c">
+    <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
+    <meta name="msapplication-TileColor" content="#c5050c">
+    <meta name="msapplication-config" content="{{ '/assets/uw-favicons/browserconfig.xml' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+    <style>
+      .reader-page {
+        font-family: "Iowan Old Style", Iowan, "Palatino Linotype", Palatino, Georgia, serif;
+        padding-top: 1rem;
+      }
+
+      .reader-page h1,
+      .reader-page h2,
+      .reader-page h3 {
+        font-family: inherit;
+      }
+
+      .reader-page h1 {
+        font-size: 2rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .reader-controls {
+        border-bottom: 1px solid rgba(74, 73, 71, 0.25);
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+      }
+
+      .reader-input {
+        display: block;
+        font-family: "Nunito", "Monospace", "Lato", sans-serif;
+        font-size: 0.95rem;
+        max-width: 100%;
+      }
+
+      .reader-status {
+        font-family: "Nunito", "Monospace", "Lato", sans-serif;
+        font-size: 0.9rem;
+        margin: 0.6rem 0 0;
+      }
+
+      .reader-output h1 {
+        font-size: 2rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .reader-output .note-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .reader-output .note-meta {
+        font-size: 0.95rem;
+        font-style: italic;
+        margin-bottom: 1.5rem;
+      }
+
+      .reader-output .note-abstract {
+        border-left: 3px solid #B17457;
+        margin: 1.5rem 0;
+        padding-left: 1rem;
+      }
+
+      .reader-output h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: 1.6rem;
+      }
+
+      .reader-output h3 {
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin-top: 1.2rem;
+      }
+
+      .reader-output table {
+        display: block;
+        margin-bottom: 1rem;
+        overflow-x: auto;
+        width: 100%;
+      }
+
+      .reader-output th,
+      .reader-output td {
+        border: 1px solid rgba(74, 73, 71, 0.25);
+        padding: 0.35rem 0.55rem;
+      }
+
+      .reader-output code,
+      .reader-output pre {
+        font-family: Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      }
+
+      .reader-output pre {
+        background: rgba(255, 255, 255, 0.45);
+        border: 1px solid rgba(74, 73, 71, 0.18);
+        padding: 0.75rem;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+
+  <body class="fixed-top-nav">
+    <header>
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <div class="navbar-identity">
+            <a class="navbar-brand title font-weight-bold" href="{{ '/' | relative_url }}">
+              <span class="font-weight-bold">{{ site.name }}</span>
+            </a>
+          </div>
+          <a class="navbar-cv" href="{{ '/cv.html' | relative_url }}">Curriculum Vitae</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mt-3 reader-page">
+      <article>
+        <div id="reader-intro">
+          <h1>Note Reader</h1>
+          <p class="reader-status">Choose a local Markdown file to render it in this browser. The file is not uploaded.</p>
+        </div>
+
+        <div class="reader-controls">
+          <input class="reader-input" id="note-input" type="file" accept=".md,.markdown,text/markdown,text/plain">
+          <p class="reader-status" id="reader-status">No file selected.</p>
+        </div>
+
+        <div class="reader-output" id="reader-output"></div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        &copy; {{ site.time | date: "%Y" }} {{ site.name }}
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.5/dist/purify.min.js"></script>
+    <script>
+      const input = document.getElementById("note-input");
+      const intro = document.getElementById("reader-intro");
+      const output = document.getElementById("reader-output");
+      const status = document.getElementById("reader-status");
+
+      marked.setOptions({
+        breaks: false,
+        gfm: true
+      });
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function cleanYamlValue(value) {
+        return value.trim().replace(/^['"]|['"]$/g, "");
+      }
+
+      function parseFrontMatter(markdown) {
+        const match = markdown.match(/^---\n([\s\S]*?)\n---\n?/);
+        if (!match) {
+          return { data: {}, body: markdown };
+        }
+
+        const data = {};
+        const lines = match[1].split("\n");
+
+        for (let index = 0; index < lines.length; index += 1) {
+          const line = lines[index];
+          const pair = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
+          if (!pair) continue;
+
+          const key = pair[1];
+          let value = pair[2];
+
+          if (value === ">-" || value === "|-" || value === ">" || value === "|") {
+            const block = [];
+            while (index + 1 < lines.length && /^\s+/.test(lines[index + 1])) {
+              index += 1;
+              block.push(lines[index].trim());
+            }
+            data[key] = block.join(" ");
+          } else {
+            data[key] = cleanYamlValue(value);
+          }
+        }
+
+        return {
+          data,
+          body: markdown.slice(match[0].length)
+        };
+      }
+
+      function formatDate(value) {
+        if (!value) return "";
+        const date = new Date(`${value}T00:00:00`);
+        if (Number.isNaN(date.getTime())) return value;
+        return date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric"
+        });
+      }
+
+      function renderNote(markdown) {
+        const parsed = parseFrontMatter(markdown);
+        const data = parsed.data;
+        const body = marked.parse(parsed.body);
+        const title = data.title || "Untitled Note";
+        const meta = [data.book, data.author, data.chapter, formatDate(data.date)].filter(Boolean).join(" · ");
+        const subtitle = data.subtitle ? `<p class="note-subtitle">${escapeHtml(data.subtitle)}</p>` : "";
+        const metaHtml = meta ? `<p class="note-meta">${escapeHtml(meta)}</p>` : "";
+        const abstract = data.abstract ? `<div class="note-abstract">${marked.parse(data.abstract)}</div>` : "";
+
+        return `
+          <h1>${escapeHtml(title)}</h1>
+          ${subtitle}
+          ${metaHtml}
+          ${abstract}
+          <hr>
+          <div class="note-content">
+            ${body}
+          </div>
+        `;
+      }
+
+      input.addEventListener("change", async () => {
+        const file = input.files && input.files[0];
+        if (!file) {
+          intro.hidden = false;
+          output.innerHTML = "";
+          status.textContent = "No file selected.";
+          return;
+        }
+
+        const markdown = await file.text();
+        intro.hidden = true;
+        output.innerHTML = DOMPurify.sanitize(renderNote(markdown));
+        status.textContent = `Loaded ${file.name}.`;
+
+        if (window.MathJax && window.MathJax.typesetPromise) {
+          window.MathJax.typesetPromise([output]);
+        }
+      });
+    </script>
+  </body>
+</html>
